@@ -938,6 +938,7 @@ supported_targets! {
 
     ("bpfeb-unknown-none", bpfeb_unknown_none),
     ("bpfel-unknown-none", bpfel_unknown_none),
+    ("loongarch64-unknown-linux-gnu", loongarch64_unknown_linux_gnu),
 }
 
 /// Warnings encountered when parsing the target `json`.
