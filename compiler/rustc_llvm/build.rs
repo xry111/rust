@@ -88,6 +88,7 @@ fn main() {
         "hexagon",
         "riscv",
         "bpf",
+        "loongarch",
     ];
 
     let required_components = &[
