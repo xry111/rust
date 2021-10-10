@@ -63,6 +63,9 @@ pub const unwinder_private_data_size: usize = 2;
 #[cfg(any(target_arch = "riscv64", target_arch = "riscv32"))]
 pub const unwinder_private_data_size: usize = 2;
 
+#[cfg(all(target_arch = "loongarch64", target_os = "linux"))]
+pub const unwinder_private_data_size: usize = 2;
+
 #[cfg(target_os = "emscripten")]
 pub const unwinder_private_data_size: usize = 20;
 
