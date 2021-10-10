@@ -2301,8 +2301,7 @@ dependencies = [
 [[package]]
 name = "object"
 version = "0.26.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39f37e50073ccad23b6d09bcb5b263f4e76d3bb6038e4a3c08e52162ffa8abc2"
+source = "git+https://github.com/xry111/rust-object?rev=ea9b3ed01aaf9a9cce78484db2b14ac524231d78#ea9b3ed01aaf9a9cce78484db2b14ac524231d78"
 dependencies = [
  "compiler_builtins",
  "crc32fast",

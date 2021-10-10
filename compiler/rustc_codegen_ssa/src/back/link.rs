@@ -381,6 +381,7 @@ fn link_rlib<'a, B: ArchiveBuilder<'a>>(
             "riscv32" => Architecture::Riscv32,
             "riscv64" => Architecture::Riscv64,
             "sparc64" => Architecture::Sparc64,
+            "loongarch64" => Architecture::LoongArch64,
 
             // This is used to handle all "other" targets. This includes targets
             // in two categories:
@@ -439,6 +440,11 @@ fn link_rlib<'a, B: ArchiveBuilder<'a>>(
                 // float abi is enabled.
                 "riscv64" if sess.target.options.features.contains("+d") => {
                     let e_flags = elf::EF_RISCV_RVC | elf::EF_RISCV_FLOAT_ABI_DOUBLE;
+                    file.flags = FileFlags::Elf { e_flags };
+                }
+
+                "loongarch64" => {
+                    let e_flags = elf::EF_LARCH_ABI_LP64;
                     file.flags = FileFlags::Elf { e_flags };
                 }
 
