@@ -8,6 +8,7 @@ mod arm;
 mod avr;
 mod bpf;
 mod hexagon;
+mod loongarch;
 mod mips;
 mod mips64;
 mod msp430;
@@ -655,6 +656,7 @@ impl<'a, Ty> FnAbi<'a, Ty> {
             }
             "asmjs" => wasm::compute_c_abi_info(cx, self),
             "bpf" => bpf::compute_abi_info(self),
+            "loongarch64" => loongarch::compute_abi_info(cx, self),
             a => return Err(format!("unrecognized arch \"{}\" in target specification", a)),
         }
 
