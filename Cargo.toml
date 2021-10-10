@@ -127,6 +127,8 @@ rustc-workspace-hack = { path = 'src/tools/rustc-workspace-hack' }
 
 libc = { git = "https://github.com/xry111/rust-libc", rev = "ce988474d9b70570ed14863526347ce940026be7" }
 
+object = { git = "https://github.com/gimli-rs/object", rev = "c4760714aa9ca6f73cd5e76991463ed1e3497589" }
+
 # See comments in `library/rustc-std-workspace-core/README.md` for what's going on
 # here
 rustc-std-workspace-core = { path = 'library/rustc-std-workspace-core' }

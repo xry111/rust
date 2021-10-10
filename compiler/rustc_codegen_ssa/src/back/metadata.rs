@@ -119,6 +119,7 @@ fn create_object_file(sess: &Session) -> Option<write::Object<'static>> {
         "riscv32" => Architecture::Riscv32,
         "riscv64" => Architecture::Riscv64,
         "sparc64" => Architecture::Sparc64,
+        "loongarch64" => Architecture::LoongArch64,
         // Unsupported architecture.
         _ => return None,
     };
@@ -132,6 +133,10 @@ fn create_object_file(sess: &Session) -> Option<write::Object<'static>> {
 
     let mut file = write::Object::new(binary_format, architecture, endianness);
     match architecture {
+        Architecture::LoongArch64 => {
+            let e_flags = elf::EF_LARCH_ABI_LP64D;
+            file.flags = FileFlags::Elf { e_flags };
+        }
         Architecture::Mips => {
             // copied from `mipsel-linux-gnu-gcc foo.c -c` and
             // inspecting the resulting `e_flags` field.
