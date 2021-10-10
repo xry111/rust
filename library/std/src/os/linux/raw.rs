@@ -236,7 +236,8 @@ mod arch {
     target_arch = "s390x",
     target_arch = "sparc64",
     target_arch = "riscv64",
-    target_arch = "riscv32"
+    target_arch = "riscv32",
+    target_arch = "loongarch64"
 ))]
 mod arch {
     #[stable(feature = "raw_ext", since = "1.1.0")]
