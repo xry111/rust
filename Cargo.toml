@@ -129,6 +129,8 @@ libc = { git = "https://github.com/xry111/rust-libc", rev = "ce988474d9b70570ed1
 
 object = { git = "https://github.com/gimli-rs/object", rev = "c4760714aa9ca6f73cd5e76991463ed1e3497589" }
 
+psm = { git = "https://github.com/xry111/rust-stacker", rev = "7b38514bde8ec1da14f8a2c0550e85ee10c26de3" }
+
 # See comments in `library/rustc-std-workspace-core/README.md` for what's going on
 # here
 rustc-std-workspace-core = { path = 'library/rustc-std-workspace-core' }
